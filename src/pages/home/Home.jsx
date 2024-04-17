@@ -21,10 +21,10 @@ export default function Home() {
 
         heroCopyReveal.current = gsap
         .timeline({ paused: true })
-        .to("h1 span",{
+        .to(".hero-copy-wrapper h1 span",{
             top: "0",
-            duration: 0.75,
-            stagger: 0.025,
+            duration: 0.8,
+            stagger: 0.045,
             ease: 'power3.out',
             delay: 0.75,
         });
