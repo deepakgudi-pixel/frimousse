@@ -22,7 +22,6 @@ export default function Transition(AllPage) {
                     exit={{ scaleY: 0 }}
                     transition={{ duration: 0.75, ease: [0.83, 0, 0.17, 1] }}
                 />
-
             </>
         );
     };

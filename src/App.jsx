@@ -10,9 +10,12 @@ import Work from './pages/work/Work';
 
 
 import { AnimatePresence } from "framer-motion";
+import Contact from './pages/contact/Contact';
 
 
 function App() {
+
+  
 
   const location = useLocation();
   const showFooter = location.pathname !== "/"
@@ -25,6 +28,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/work" element={<Work />} />
+        <Route path="/contact" element={<Contact />} />
        </Routes>
        </AnimatePresence>
     </>
