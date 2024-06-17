@@ -18,7 +18,7 @@ export default function Menu() {
   const menuLinks = [
 
     { path: "/about", label: "About" },
-    { path: "/works", label: "Work" },
+    { path: "/work", label: "Work" },
     { path: "/", label: "Home" },
     { path: "/contact", label: "Contact" },
 
