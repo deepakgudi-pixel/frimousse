@@ -1,4 +1,5 @@
 import Transition from "../../components/transition/Transition";
+
 import "./work.css";
 
 function Work() {
