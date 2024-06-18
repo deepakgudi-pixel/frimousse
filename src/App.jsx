@@ -9,6 +9,8 @@ import Contact from './pages/contact/Contact';
 
 import Cursor from './components/customCursor/CustomCursor';
 import Menu from './components/menu/Menu';
+import Louisvuitton from './pages/louisvuitton/Louisvuitton';
+
 
 function App() {
   const location = useLocation();
@@ -23,6 +25,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/work" element={<Work />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/louisvuitton" element={<Louisvuitton />} />
         </Routes>
       </AnimatePresence>
     </>

@@ -18,6 +18,7 @@ import ProjectVideo5 from "../../assets/videos/project-5.mp4";
 import "./work.css";
 
 function Work() {
+
   const workCopyReveal = useRef();
   const videoRefs = useRef([]);
   const [videoStates, setVideoStates] = useState([
@@ -47,6 +48,10 @@ function Work() {
 
     videoRefs.current[index].style.opacity = 1;
     videoRefs.current[index].play();
+
+    gsap.to(".project-item", { opacity: 0, duration: 0.5 }); // Fade out all projects
+    gsap.to(document.querySelectorAll(".project-item")[index], { opacity: 1, duration: 0.5 }); // Keep hovered project at full opacity
+    document.querySelectorAll(".project-item")[index].classList.add("hovered");
   };
 
   const handleMouseLeave = (index) => {
@@ -57,6 +62,9 @@ function Work() {
     videoRefs.current[index].pause();
     videoRefs.current[index].currentTime = videoStates[index].currentTime;
     videoRefs.current[index].style.opacity = 0;
+
+    gsap.to(".project-item", { opacity: 1, duration: 0.5 }); // Restore opacity
+    document.querySelectorAll(".project-item")[index].classList.remove("hovered");
   };
 
   return (
@@ -88,7 +96,7 @@ function Work() {
                 onMouseLeave={() => handleMouseLeave(0)}
               >
                 <div className="project-img">
-                  <Link to="/sample-project">
+                  <Link to="/louisvuitton">
                     <img src={ProjectImg1} alt="" />
                   </Link>
                 </div>
@@ -109,7 +117,7 @@ function Work() {
                 onMouseLeave={() => handleMouseLeave(1)}
               >
                 <div className="project-img">
-                  <Link to="/sample-project">
+                  <Link to="/">
                     <img src={ProjectImg2} alt="" />
                   </Link>
                 </div>
@@ -128,7 +136,7 @@ function Work() {
                 onMouseLeave={() => handleMouseLeave(2)}
               >
                 <div className="project-img">
-                  <Link to="/sample-project">
+                  <Link to="/">
                     <img src={ProjectImg3} alt="" />
                   </Link>
                 </div>
@@ -149,7 +157,7 @@ function Work() {
                 onMouseLeave={() => handleMouseLeave(3)}
               >
                 <div className="project-img">
-                  <Link to="/sample-project">
+                  <Link to="/">
                     <img src={ProjectImg4} alt="" />
                   </Link>
                 </div>
@@ -168,7 +176,7 @@ function Work() {
                 onMouseLeave={() => handleMouseLeave(4)}
               >
                 <div className="project-img">
-                  <Link to="/sample-project">
+                  <Link to="/">
                     <img src={ProjectImg5} alt="" />
                   </Link>
                 </div>
