@@ -2,8 +2,6 @@ import Transition from "../../components/transition/Transition";
 import MagnetButton from "../../components/magnetButton/MagnetButton";
 import "./contact.css";
 
-
-
 const Contact = () => {
   return (
     <div className="contact page">
@@ -51,11 +49,10 @@ const Contact = () => {
               </p>
             </div>
             <div className="contact-col">
-              <h3>
-                Subscribe to our newsletter to get insights.
-              </h3>
+              <h3>Subscribe to our newsletter to get insights.</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, provident.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,
+                provident.
               </p>
 
               <div className="input">

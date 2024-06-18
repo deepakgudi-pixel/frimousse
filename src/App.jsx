@@ -1,14 +1,14 @@
-import { useState } from 'react';
+import { useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
-import Home from './pages/home/Home';
+import Home from "./pages/home/Home";
 import About from "./pages/about/About";
-import Work from './pages/work/Work';
-import Contact from './pages/contact/Contact';
+import Work from "./pages/work/Work";
+import Contact from "./pages/contact/Contact";
 
-import Cursor from './components/customCursor/CustomCursor';
-import Menu from './components/menu/Menu';
+import Cursor from "./components/customCursor/CustomCursor";
+import Menu from "./components/menu/Menu";
 
 function App() {
   const location = useLocation();
